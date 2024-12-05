@@ -14,28 +14,20 @@ public class Problema02 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         double celcius;
-        double farenheit;
-        int operacion;
-        String cadenafinal = "";
-        String cadenafinal2 = "";
+          
+        double farenheit = 20;
+        int operacion = 20;
+        String cadenaFinal = "";
+        double celsius;
 
-        for (operacion = 0; operacion <= 20; operacion++) {
-            for (farenheit = 20; farenheit <= 100; farenheit += 4) {
-                celcius = 5 / 9 * (farenheit - 32);
-                cadenafinal = String.format("%sOperacion (%d) Farenheit: %.2f ===> Celcius: %.2f\n",
-                        cadenafinal,
-                        operacion,
-                        farenheit,
-                        celcius);
+        for (int i = 0; i <= operacion; i++) {
+            celsius = (5.0 / 9) * (farenheit - 32);
+            cadenaFinal =  String.format("%sOperacion(%d)Farenheit: %.2f ===> Celsius: "
+                            + "%.2f\n",cadenaFinal, i, farenheit, celsius);
+            farenheit = farenheit + 4;
 
-            }
-
-            cadenafinal2 = String.format("%s%s", cadenafinal2, cadenafinal);
-            cadenafinal = "";
         }
-
-        System.out.printf("%s", cadenafinal2);
+        System.out.println(cadenaFinal);
     }
 }
 
